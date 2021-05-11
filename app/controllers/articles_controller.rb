@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     def index
         @articles = Article.all
+        render json: @articles , status: 200
     end
 
     def new
